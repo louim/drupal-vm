@@ -1,0 +1,19 @@
+---
+- name: Check if Magento is already set up.
+  stat: "path={{ magento_core_path }}/app/etc/local.xml"
+  register: magento_install
+
+- name: Install Magento with Magerun
+  command: >
+    magerun install
+    --dbHost="localhost"
+    --dbUser="{{ magento_mysql_user }}"
+    --dbPass="{{ magento_mysql_password }}"
+    --dbName="{{ magento_mysql_database }}"
+    --installSampleData={{ magento_install_sample_data }}
+    --useDefaultConfigParams=yes
+    --magentoVersion="{{ magento_version }}"
+    --installationFolder="{{ magento_core_path }}"
+    --baseUrl="http://{{ magento_domain }}/"
+  when: magento_install.stat.exists == false
+  sudo: no

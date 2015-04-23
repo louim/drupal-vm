@@ -41,6 +41,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "provisioning/playbook.yml"
       ansible.sudo = true
+      # ansible.verbose = 'vvvv'
     end
   end
 
@@ -64,6 +65,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   # Set the name of the VM. See: http://stackoverflow.com/a/17864388/100134
-  config.vm.define :drupaldev do |drupaldev_config|
-  end
+  config.vm.define :magentodev
 end

@@ -18,7 +18,7 @@
     - { role: geerlingguy.php-pecl, tags: ['php'] }
     - { role: geerlingguy.php-mysql, tags: ['php'] }
     - { role: geerlingguy.composer, tags: ['composer'] }
-    - { role: geerlingguy.drush, tags: ['drush'] }
+    - { role: louim.magerun, tags: ['magerun'] }
 
     # Roles to be installed conditionally.
     - {
@@ -60,5 +60,5 @@
 
   tasks:
     - include: tasks/www.yml
-    - include: tasks/drupal.yml
-      when: build_from_makefile
+    - include: tasks/magento.yml
+      when: install_magento

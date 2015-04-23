@@ -1,18 +1,19 @@
-- geerlingguy.firewall
-- geerlingguy.git
-- geerlingguy.apache
-- geerlingguy.memcached
-- geerlingguy.mysql
-- geerlingguy.php
-- geerlingguy.php-pecl
-- geerlingguy.php-memcached
-- geerlingguy.php-mysql
-- geerlingguy.php-xdebug
-- geerlingguy.php-xhprof
-- geerlingguy.phpmyadmin
-- geerlingguy.composer
-- geerlingguy.drush
-- geerlingguy.daemonize
-- geerlingguy.mailhog
-- geerlingguy.java
-- geerlingguy.solr
+- src: geerlingguy.firewall
+- src: geerlingguy.git
+- src: geerlingguy.apache
+- src: geerlingguy.memcached
+- src: geerlingguy.mysql
+- src: geerlingguy.php
+- src: geerlingguy.php-pecl
+- src: geerlingguy.php-memcached
+- src: geerlingguy.php-mysql
+- src: geerlingguy.php-xdebug
+- src: geerlingguy.php-xhprof
+- src: geerlingguy.phpmyadmin
+- src: geerlingguy.composer
+- src: geerlingguy.daemonize
+- src: geerlingguy.mailhog
+- src: geerlingguy.java
+- src: geerlingguy.solr
+- src: https://github.com/louim/ansible-role-magerun
+  name: louim.magerun
